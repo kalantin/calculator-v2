@@ -3,7 +3,7 @@ const result = document.querySelector('.result');
 const action = [];
 let number = '';
 let sign = '';
-let summary;
+let summary = '';
 const task = (e) => {
 	const target = e.target.textContent;
 	if (target === '+' || target === '-' || target === '*' || target === '/') {
@@ -36,13 +36,15 @@ const task = (e) => {
 		number = sliceNumber;
 		if (summary !== '') {
 			result.textContent = summary;
+		} else if (action.length === 0) {
+			result.textContent = 0;
 		} else {
 			result.textContent = number;
 		}
 	} else {
 		if (sign === '') {
 			action.length = 0;
-			summary = ''
+			summary = '';
 		}
 		number += target;
 		result.textContent = number;
