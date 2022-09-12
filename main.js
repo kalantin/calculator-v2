@@ -27,7 +27,7 @@ const task = (e) => {
 		sign = '';
 		summary = '';
 		result.textContent = 0;
-	} else if (target === '=') {git
+	} else if (target === '=') {
 		if (number !== '') {
 			score();
 		}
